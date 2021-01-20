@@ -1,0 +1,7 @@
+@use './partials/variables'as *;
+@use './partials/mixins'as *;
+@use './partials/resets';
+
+body {
+  background-color: color(global-gray) !important;
+}
