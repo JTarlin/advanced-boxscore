@@ -1,4 +1,4 @@
-const scrapeServices = require("../services/scrape");
+const scrapeServices = require("../services/scoreboardScrape");
 const browserObject = require("../library/browser");
 module.exports = {
   scrape: async (req, res) => {

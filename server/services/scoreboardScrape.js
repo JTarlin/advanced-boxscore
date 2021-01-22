@@ -9,6 +9,11 @@ module.exports = {
     const innerText = await page.evaluate(() => {
       return JSON.parse(document.querySelector("body").innerText);
     });
-    return innerText;
+    //we fill the todaysIds array with the Ids of all the games from the given day off /todaysScoreboard
+    let todaysIds =[];
+    for(game of innerText.scoreboard.games) {
+      todaysIds.push(game.gameId);
+    }
+    return todaysIds; //instead of returning scoreboard json return game ids
   },
 };
